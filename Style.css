@@ -1,0 +1,79 @@
+/* styles.css */
+
+.font {
+    font-size: 18px; 
+    font-weight: bold;
+}
+
+.background-common {
+    background-image: url('cat_dog.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-dog {
+    background-image: url('dog.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-cat {
+    background-image: url('cat.jpg'); /* Assuming you have a cat image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-size: cover;
+    background-position: center;
+    padding: 50px; 
+    border-radius: 20px;
+    width: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+  
+.form-control {
+    margin-bottom: 10px; 
+}
+  
+.btn-primary {
+    background-color: #007bff; 
+    border-color: #007bff; 
+}
+  
+.btn-primary:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3; 
+}
+
+.input-bar {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); 
+    padding: 10px;
+    width: 300px;
+    margin: 10px;
+    color: rgb(7, 7, 7);
+    font-size: 16px;
+    outline: none; /* Remove default focus outline */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.input-bar:focus {
+    background-color: rgba(255, 255, 255, 0.4); /* Slightly more opaque white when focused */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8); /* Thicker semi-transparent white border when focused */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4); /* Light white shadow when focused */
+}
+
