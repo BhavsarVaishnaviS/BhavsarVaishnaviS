@@ -1,0 +1,324 @@
+/* Mobile Dashboard - Optimized for max-width: 480px */
+.mobile-dashboard {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ========== Mobile Header ========== */
+.mobile-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  font-size: 28px;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.dashboard-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.dashboard-subtitle {
+  font-size: 13px;
+  color: #7f8c8d;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* ========== Current Race Section ========== */
+.current-race-section {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 10px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.current-race-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.race-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.race-badge {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.race-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.race-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.race-subtitle {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.category-toggle-btn {
+  background: #667eea !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 8px 16px !important;
+  font-size: 12px !important;
+  height: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  flex-shrink: 0;
+}
+
+.category-toggle-btn:hover {
+  background: #5a6fd8 !important;
+  transform: translateY(-1px);
+}
+
+/* ========== Race Categories Mobile ========== */
+.race-categories-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.categories-header {
+  background: white;
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.categories-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.close-btn {
+  font-size: 24px !important;
+  color: #95a5a6 !important;
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  width: 30px !important;
+  height: 30px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.race-buttons-grid {
+  background: white;
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.mobile-race-button {
+  width: 100% !important;
+  height: 50px !important;
+  border-radius: 12px !important;
+  border: 2px solid !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 0 15px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  gap: 10px !important;
+}
+
+.mobile-race-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-race-button.active {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.race-color-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ========== Chart Section ========== */
+.mobile-chart-section {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 10px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ========== Mobile Stats ========== */
+.mobile-stats {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 10px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* ========== Responsive Adjustments ========== */
+@media (max-width: 480px) {
+  .mobile-dashboard {
+    font-size: 14px;
+  }
+  
+  .race-buttons-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  
+  .mobile-race-button {
+    height: 45px !important;
+    font-size: 13px !important;
+  }
+  
+  .chart-wrapper {
+    height: 250px;
+  }
+  
+  .dashboard-title {
+    font-size: 18px;
+  }
+  
+  .race-name {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-header {
+    padding: 12px;
+  }
+  
+  .current-race-section {
+    margin: 8px;
+    padding: 12px;
+  }
+  
+  .mobile-chart-section {
+    margin: 8px;
+    padding: 12px;
+  }
+  
+  .mobile-stats {
+    margin: 8px;
+    padding: 12px;
+  }
+  
+  .chart-wrapper {
+    height: 220px;
+  }
+}
